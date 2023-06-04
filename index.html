@@ -16,6 +16,7 @@
     <title>Web Studio</title>
   </head>
   <body>
+    <!-- HEADER -->
     <header class="page-header">
       <div class="container page-header-container">
         <nav class="page-nav">
@@ -34,6 +35,11 @@
             </li>
           </ul>
         </nav>
+        <button type="button" class="mobile-menu-btn js-open-menu" aria-expanded="false">
+          <svg class="mobile-menu-btn-svg" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu-hamburger"></use>
+          </svg>
+        </button>
         <address class="contact">
           <ul class="contact-list list">
             <li class="contact-item">
@@ -45,14 +51,82 @@
           </ul>
         </address>
       </div>
+      <div class="mobile-menu js-menu-container">
+        <div class="mobile-menu-container container">
+          <button type="button" class="mobile-menu-close-btn js-close-menu">
+            <svg class="mobile-menu-close-btn-svg" width="8" height="8">
+              <use href="./images/icons.svg#icon-close-btn"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu-list list">
+            <li class="mobile-menu-item">
+              <a class="mobile-menu-link mobile-menu-link-active link" href="./index.html"
+                >Studio</a
+              >
+            </li>
+            <li class="mobile-menu-item">
+              <a class="mobile-menu-link link" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="mobile-menu-item"><a class="mobile-menu-link link" href="">Contacts</a></li>
+          </ul>
+          <div class="mobile-menu-contact-wrapper">
+            <ul class="mobile-menu-contact-list list">
+              <li class="mobile-menu-contact-tel-item">
+                <a class="mobile-menu-contact-tel link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="mobile-menu-contact-email-item">
+                <a class="mobile-menu-contact-email link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <div class="mobile-menu-social-list-wrapper">
+              <ul class="mobile-menu-social-list list">
+                <li class="mobile-menu-social-item">
+                  <a class="mobile-menu-social-link" href=""
+                    ><svg class="mobile-menu-social-svg" width="24" height="24">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="mobile-menu-social-item">
+                  <a class="mobile-menu-social-link" href=""
+                    ><svg class="mobile-menu-social-svg" width="24" height="24">
+                      <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="mobile-menu-social-item">
+                  <a class="mobile-menu-social-link" href=""
+                    ><svg class="mobile-menu-social-svg" width="24" height="24">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="mobile-menu-social-item">
+                  <a class="mobile-menu-social-link" href=""
+                    ><svg class="mobile-menu-social-svg" width="24" height="24">
+                      <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <main>
+      <!-- HERO -->
       <section class="hero">
         <div class="container">
           <h1 class="hero-descr">Effective Solutions for Your Business</h1>
           <button class="modal-open-btn" type="button" data-modal-open>Order Service</button>
         </div>
       </section>
+      <!-- ADVANTAGES -->
       <section class="principle-section section">
         <div class="container">
           <h2 class="principle-title-hidden visually-hidden">Principles of work</h2>
@@ -93,7 +167,7 @@
                 and minimize risk.
               </p>
             </li>
-            <li class="principle-item">
+            <li class="principle-item principle-last-item">
               <div class="principle-icon-container">
                 <svg class="principle-icon" aria-label="Icon astronaut" width="64" height="64">
                   <use href="./images/icons.svg#icon-astronaut"></use>
@@ -108,6 +182,7 @@
           </ul>
         </div>
       </section>
+      <!-- WHAT ARE WE DOING -->
       <section class="working-section">
         <div class="container">
           <h2 class="working-img-title">What Are We Doing</h2>
@@ -115,6 +190,10 @@
             <li class="working-img-item">
               <img
                 class="working-img"
+                srcset="
+                  ./images/what-are-we-doing/pc-content.jpg    1x,
+                  ./images/what-are-we-doing/pc-content@2x.jpg 2x
+                "
                 src="./images/what-are-we-doing/pc-content.jpg"
                 alt="PC content"
                 width="360"
@@ -124,6 +203,10 @@
             <li class="working-img-item">
               <img
                 class="working-img"
+                srcset="
+                  ./images/what-are-we-doing/mobile-application.jpg    1x,
+                  ./images/what-are-we-doing/mobile-application@2x.jpg 2x
+                "
                 src="./images/what-are-we-doing/mobile-application.jpg"
                 alt="Mobile application"
                 width="360"
@@ -133,6 +216,10 @@
             <li class="working-img-item">
               <img
                 class="working-img"
+                srcset="
+                  ./images/what-are-we-doing/mobile-content.jpg    1x,
+                  ./images/what-are-we-doing/mobile-content@2x.jpg 2x
+                "
                 src="./images/what-are-we-doing/mobile-content.jpg"
                 alt="Mobile content"
                 width="360"
@@ -142,13 +229,18 @@
           </ul>
         </div>
       </section>
+      <!-- OUR TEAM -->
       <section class="our-team-section section">
-        <div class="container">
+        <div class="container tablet-container">
           <h2 class="team-title">Our Team</h2>
           <ul class="team-list list">
             <li class="team-item">
               <img
                 class="team-img"
+                srcset="
+                  ./images/our-team/mark-guerrero.jpg    1x,
+                  ./images/our-team/mark-guerrero@2x.jpg 2x
+                "
                 src="./images/our-team/mark-guerrero.jpg"
                 alt="Mark Guerrero"
                 width="264"
@@ -212,6 +304,7 @@
             <li class="team-item">
               <img
                 class="team-img"
+                srcset="./images/our-team/tom-ford.jpg 1x, ./images/our-team/tom-ford@2x.jpg 2x"
                 src="./images/our-team/tom-ford.jpg"
                 alt="Tom Ford"
                 width="264"
@@ -275,6 +368,10 @@
             <li class="team-item">
               <img
                 class="team-img"
+                srcset="
+                  ./images/our-team/camila-garcia.jpg    1x,
+                  ./images/our-team/camila-garcia@2x.jpg 2x
+                "
                 src="./images/our-team/camila-garcia.jpg"
                 alt="Camila Garcia"
                 width="264"
@@ -338,6 +435,10 @@
             <li class="team-item">
               <img
                 class="team-img"
+                srcset="
+                  ./images/our-team/daniel-wilson.jpg    1x,
+                  ./images/our-team/daniel-wilson@2x.jpg 2x
+                "
                 src="./images/our-team/daniel-wilson.jpg"
                 alt="Daniel Wilson"
                 width="264"
@@ -401,8 +502,9 @@
           </ul>
         </div>
       </section>
+      <!-- CUSTOMERS -->
       <section class="customers-section section">
-        <div class="container">
+        <div class="container tablet-container">
           <h2 class="companies-icon-title">Customers</h2>
           <ul class="company-list list">
             <li class="company-list-item">
@@ -481,8 +583,9 @@
         </div>
       </section>
     </main>
+    <!-- FOOTER -->
     <footer class="footer">
-      <div class="footer-container container">
+      <div class="footer-container tablet-container container">
         <div class="footer-main">
           <a href="./index.html" class="logo logo-footer link"
             >Web<span class="logo-item-theme-dark">Studio</span></a
@@ -565,6 +668,7 @@
         </div>
       </div>
     </footer>
+    <!-- MODAL -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
@@ -645,6 +749,14 @@
         </form>
       </div>
     </div>
+    <!-- SCRIPTS -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
