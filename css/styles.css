@@ -508,12 +508,8 @@ screen and (min-resolution: 2dppx) and (min-width: 1158px) {
 /* Advantages */
 
 @media screen and (max-width: 767px) {
-    .principle-item {
+    .principle-item:not(:last-child) {
         margin-bottom: 72px;
-    }
-
-    .principle-last-item {
-        margin-bottom: 0;
     }
 
     .principle-title {
